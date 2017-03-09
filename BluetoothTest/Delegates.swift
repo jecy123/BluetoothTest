@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
+protocol ButtonEventDelegate : class{
+    func button(_ button :UIButton,didTapped value:Int?)
+}

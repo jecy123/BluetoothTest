@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,14 +19,53 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="kYB-2j-KwA">
+                                <rect key="frame" x="-333" y="0.0" width="1080" height="736"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Remote" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cY-g3-muG">
+                                <rect key="frame" x="20" y="336" width="374" height="64"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="45"/>
+                                <color key="textColor" red="0.017716234550000001" green="0.6622280478" blue="0.92020618919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVI-YY-spl">
+                                <rect key="frame" x="20" y="676" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ReS-sC-Vnt"/>
+                                </constraints>
+                                <string key="text">Copyright©2016 Routon Electronic Co., Ltd.
+All rights reserved.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.017716234550000001" green="0.6622280478" blue="0.92020618919999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kYB-2j-KwA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="2Qo-IP-rdH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8cY-g3-muG" secondAttribute="trailing" id="5t7-Kw-QX2"/>
+                            <constraint firstItem="RVI-YY-spl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="AXn-xQ-fp7"/>
+                            <constraint firstItem="kYB-2j-KwA" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="BZm-0t-hZ5"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="RVI-YY-spl" secondAttribute="bottom" constant="20" id="GFB-yb-dLi"/>
+                            <constraint firstItem="8cY-g3-muG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="JAm-M9-2tq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RVI-YY-spl" secondAttribute="trailing" id="MIp-fA-34N"/>
+                            <constraint firstItem="kYB-2j-KwA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="RkK-41-u2E"/>
+                            <constraint firstItem="RVI-YY-spl" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="SKY-lK-Obn"/>
+                            <constraint firstItem="8cY-g3-muG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XNU-NP-x9C"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kYB-2j-KwA" secondAttribute="bottom" id="Xos-tW-4tu"/>
+                            <constraint firstItem="8cY-g3-muG" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="yof-R6-73V"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="49.275362318840585" y="373.36956521739131"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1080" height="1920"/>
+    </resources>
 </document>

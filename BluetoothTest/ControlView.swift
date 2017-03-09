@@ -8,38 +8,53 @@
 
 import UIKit
 
-class FirstView : UIView
+class ControlView : UIView
 {
     @IBOutlet var mainView: UIView!
-    var buttonFirst:UIButton?
-    var buttonSecond:UIButton?
     
+    @IBOutlet var ControlButtons:Array<UIButton>!
+    @IBOutlet var BehaveButtons:Array<UIButton>!
+    
+    weak var buttonEventdelegate:ButtonEventDelegate?
     
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        print("init1")
-        Bundle.main.loadNibNamed("FirstView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("ControlView", owner: self, options: nil)
     }
 
     required init?(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
-        print("init2")
     }
     
     func InitView()
     {
-//        mainView = self.viewWithTag(Global.TagMainFirstView)
-
         self.addSubview(self.mainView)
         
+        self.mainView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            self.mainView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            self.mainView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            self.mainView.topAnchor.constraint(equalTo: self.topAnchor),
+            self.mainView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            ])
+
+        //父类视图加载后才能使用viewWithTag函数
+        //buttonFirst = self.viewWithTag(Global.TagButtonFirst) as? UIButton
+        //buttonSecond = self.viewWithTag(Global.TagButtonSecond) as? UIButton
+        for button1 in self.ControlButtons
+        {
+            button1.addTarget(self, action: #selector(OnControlClick), for: .touchUpInside)
+        }
         
-        buttonFirst = self.viewWithTag(Global.TagButtonFirst) as? UIButton
-        buttonSecond = self.viewWithTag(Global.TagButtonSecond) as? UIButton
+        for button2 in self.BehaveButtons
+        {
+            button2.addTarget(self, action: #selector(OnBehaveClick), for: .touchUpInside)
+        }
         
-        buttonFirst?.addTarget(self, action: #selector(OnClick), for: .touchUpInside)
-        buttonSecond?.addTarget(self, action: #selector(OnClick), for: .touchUpInside)
+//        buttonFirst.addTarget(self, action: #selector(OnClick), for: .touchUpInside)
+//        buttonSecond.addTarget(self, action: #selector(OnClick), for: .touchUpInside)
         
     }
     
@@ -50,16 +65,24 @@ class FirstView : UIView
     }
     
     
-    func OnClick(_ sender:UIButton)
+    func OnControlClick(_ sender:UIButton)
     {
-        switch sender.tag {
-        case Global.TagButtonFirst:
-            print("firstButton pressed")
-        case Global.TagButtonSecond:
-            print("secondButton pressed")
-            
-        default:
-            break
+        
+        print("Control:+\(sender.titleLabel?.text)")
+        if let titleLabel = sender.titleLabel
+        {
+            let value = Global.keyCodes[titleLabel.text!]
+            self.buttonEventdelegate?.button(sender, didTapped: value?.rawValue)
+        }
+    }
+    
+    func OnBehaveClick(_ sender:UIButton)
+    {
+        print("Behave:+\(sender.titleLabel?.text)")
+        if let titleLabel = sender.titleLabel
+        {
+            let value = Global.keyCodes[titleLabel.text!]
+            self.buttonEventdelegate?.button(sender, didTapped: value?.rawValue)
         }
     }
 }

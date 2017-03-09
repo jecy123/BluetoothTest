@@ -7,3 +7,32 @@
 //
 
 import Foundation
+import CoreBluetooth
+
+class Device
+{
+    let peripheral: CBPeripheral
+    var advertisementData: [String : AnyObject]?
+    
+    
+    init(_ peripheral: CBPeripheral)
+    {
+        self.peripheral = peripheral
+    }
+    
+    func writeValue(_ data: Data)
+    {
+        if let characteristic = peripheral.services?.first?.characteristics?.first
+        {
+            peripheral.writeValue(data, for: characteristic, type: .withResponse)
+        }
+    }
+    
+    static func ==(lhs:Device , rhs:Device) -> Bool
+    {
+        return rhs.peripheral == lhs.peripheral
+    }
+    
+}
+
+

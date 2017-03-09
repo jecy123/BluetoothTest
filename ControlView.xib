@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -9,29 +9,249 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstView" customModule="BluetoothTest" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ControlView" customModule="BluetoothTest" customModuleProvider="target">
             <connections>
                 <outlet property="mainView" destination="iN0-l3-epB" id="4kt-uN-Tpz"/>
+                <outletCollection property="BehaveButtons" destination="M1t-gb-StA" collectionClass="NSMutableArray" id="cl6-qH-fBU"/>
+                <outletCollection property="BehaveButtons" destination="Rzt-GP-hOX" collectionClass="NSMutableArray" id="qsa-5O-pB6"/>
+                <outletCollection property="BehaveButtons" destination="c4g-vh-tIp" collectionClass="NSMutableArray" id="v3W-kw-hzM"/>
+                <outletCollection property="ControlButtons" destination="u2g-lR-lr4" collectionClass="NSMutableArray" id="Im7-WA-vgO"/>
+                <outletCollection property="ControlButtons" destination="bbG-Yb-CzI" collectionClass="NSMutableArray" id="JVX-EM-vHh"/>
+                <outletCollection property="ControlButtons" destination="yQx-sm-s7a" collectionClass="NSMutableArray" id="0dc-dq-gaB"/>
+                <outletCollection property="ControlButtons" destination="4D7-e9-FEt" collectionClass="NSMutableArray" id="nRx-hT-FOl"/>
+                <outletCollection property="ControlButtons" destination="ruy-8O-ZUk" collectionClass="NSMutableArray" id="i3u-iq-ssl"/>
+                <outletCollection property="ControlButtons" destination="JuB-D4-zKy" collectionClass="NSMutableArray" id="N7K-KL-5YK"/>
+                <outletCollection property="ControlButtons" destination="C24-G0-HEO" collectionClass="NSMutableArray" id="bXC-2n-Tx5"/>
+                <outletCollection property="ControlButtons" destination="JyQ-0w-LxG" collectionClass="NSMutableArray" id="Ffx-iX-rJw"/>
+                <outletCollection property="ControlButtons" destination="8aM-b6-pKK" collectionClass="NSMutableArray" id="BKv-qG-1wq"/>
+                <outletCollection property="ControlButtons" destination="gzt-FC-dSy" collectionClass="NSMutableArray" id="3Op-e1-S9d"/>
+                <outletCollection property="ControlButtons" destination="J9d-Hg-15x" collectionClass="NSMutableArray" id="qfV-RL-LHJ"/>
+                <outletCollection property="ControlButtons" destination="i1b-xW-lVR" collectionClass="NSMutableArray" id="kM1-C1-61l"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view tag="1" contentMode="scaleToFill" id="iN0-l3-epB" userLabel="mainView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="1000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-lR-lr4">
-                    <rect key="frame" x="119" y="211" width="46" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="first"/>
+                <button opaque="NO" tag="1000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u2g-lR-lr4" userLabel="PowerButton">
+                    <rect key="frame" x="8" y="8" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="0Jz-GI-uMT"/>
+                        <constraint firstAttribute="height" constant="44" id="Hti-ZM-u6L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                    <state key="normal" title="PowerButton" image="PowerButtonDefault"/>
+                    <state key="highlighted" image="PowerButtonHighlighted"/>
                 </button>
-                <button opaque="NO" tag="1001" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-gb-StA">
-                    <rect key="frame" x="185" y="211" width="66" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="second"/>
+                <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M1t-gb-StA" userLabel="TipButton">
+                    <rect key="frame" x="138" y="8" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6Gj-J8-tdg"/>
+                        <constraint firstAttribute="width" constant="44" id="GVE-Hc-pa3"/>
+                    </constraints>
+                    <state key="normal" title="TipButtoon" image="TipButtonDefault"/>
+                    <state key="highlighted" image="TipButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbG-Yb-CzI" userLabel="MuteButton">
+                    <rect key="frame" x="268" y="8" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0aE-TK-FPN"/>
+                        <constraint firstAttribute="width" constant="44" id="Ble-Rr-sgz"/>
+                    </constraints>
+                    <state key="normal" title="MuteButton" image="MuteButtonDefault"/>
+                    <state key="highlighted" title="MuteButton" image="MuteButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ruy-8O-ZUk" userLabel="HomeButton">
+                    <rect key="frame" x="8" y="62" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="uTK-rF-kEA"/>
+                        <constraint firstAttribute="height" constant="44" id="vS0-Su-k6e"/>
+                    </constraints>
+                    <state key="normal" title="HomeButton" image="HomeButtonDefault"/>
+                    <state key="highlighted" image="HomeButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzt-GP-hOX" userLabel="BluetoothButton">
+                    <rect key="frame" x="97" y="63" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Hfc-uV-ToC"/>
+                        <constraint firstAttribute="width" constant="44" id="jt0-xu-LJF"/>
+                    </constraints>
+                    <state key="normal" title="BluetoothButton" image="DisconnectedButtonDefault"/>
+                    <state key="highlighted" title="BluetoothButton" image="DisconnectedButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4D7-e9-FEt" userLabel="MenuButton">
+                    <rect key="frame" x="174" y="62" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="TPJ-p8-NXy"/>
+                        <constraint firstAttribute="height" constant="44" id="luY-AE-1q0"/>
+                    </constraints>
+                    <state key="normal" title="MenuButton" image="MenuButtonDefault"/>
+                    <state key="highlighted" image="MenuButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQx-sm-s7a" userLabel="BackButton">
+                    <rect key="frame" x="268" y="62" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="06u-XU-Giv"/>
+                        <constraint firstAttribute="height" constant="44" id="GhL-LQ-LNR"/>
+                    </constraints>
+                    <state key="normal" title="backButton" image="BackButtonDefault"/>
+                    <state key="highlighted" image="BackButtonHighlighted"/>
+                </button>
+                <imageView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CenterBackground" translatesAutoresizingMaskIntoConstraints="NO" id="y6d-L3-IHq">
+                    <rect key="frame" x="50" y="174" width="220" height="220"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="220" id="g1h-Hx-knH"/>
+                        <constraint firstAttribute="height" constant="220" id="ik3-6p-xk0"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aM-b6-pKK" userLabel="LeftButton">
+                    <rect key="frame" x="50" y="262.5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="ZID-2E-Shg"/>
+                        <constraint firstAttribute="height" constant="44" id="dlH-eJ-7NX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                    <state key="normal" title="LeftButton" image="LeftButtonDefault"/>
+                    <state key="highlighted" image="LeftButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyQ-0w-LxG" userLabel="RightButton">
+                    <rect key="frame" x="226" y="262" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Di7-gZ-RgC"/>
+                        <constraint firstAttribute="height" constant="44" id="bEE-py-eZp"/>
+                    </constraints>
+                    <state key="normal" title="RightButton" image="RightButtonDefault"/>
+                    <state key="highlighted" title="RightButton" image="RightButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzt-FC-dSy" userLabel="UpButton">
+                    <rect key="frame" x="138" y="174" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="V30-CJ-uMd"/>
+                        <constraint firstAttribute="width" constant="44" id="w6Q-jB-17j"/>
+                    </constraints>
+                    <state key="normal" title="UpButton" image="UpButtonDefault"/>
+                    <state key="highlighted" title="UpButton" image="UpButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9d-Hg-15x" userLabel="DownButton">
+                    <rect key="frame" x="138" y="350" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="EYw-eT-ZCG"/>
+                        <constraint firstAttribute="width" constant="44" id="yH3-Uh-sYH"/>
+                    </constraints>
+                    <state key="normal" title="DownButton" image="DownButtonDefault"/>
+                    <state key="highlighted" image="DownButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C24-G0-HEO" userLabel="VolumeDownButton">
+                    <rect key="frame" x="8" y="516" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="JbH-KC-BxU"/>
+                        <constraint firstAttribute="height" constant="44" id="mjI-WS-VVc"/>
+                    </constraints>
+                    <state key="normal" title="VolumeDownButton" image="VolumeDownButtonDefault"/>
+                    <state key="highlighted" title="VolumeDownButton" image="VolumeDownButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-vh-tIp">
+                    <rect key="frame" x="138" y="516" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="UAf-8j-MFr"/>
+                        <constraint firstAttribute="height" constant="44" id="iwO-Fp-Mwf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="KeyboardButton" image="KeyboardButtonDefault"/>
+                    <state key="highlighted" image="KeyboardButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JuB-D4-zKy" userLabel="VolumeUpButton">
+                    <rect key="frame" x="268" y="516" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="AMU-51-Yqy"/>
+                        <constraint firstAttribute="width" constant="44" id="Nji-cf-7Tq"/>
+                    </constraints>
+                    <state key="normal" title="VolumeUpButton" image="VolumeUpButtonDefault"/>
+                    <state key="highlighted" title="VolumeUpButton" image="VolumeUpButtonHighlighted"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i1b-xW-lVR" userLabel="OKButton">
+                    <rect key="frame" x="138" y="262" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Fy1-ls-Hr1"/>
+                        <constraint firstAttribute="width" constant="44" id="Ila-2a-Cx8"/>
+                    </constraints>
+                    <state key="normal" title="OKButton" image="OKButtonDefault"/>
+                    <state key="highlighted" title="OKButton" image="OKButtonHighlighted"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-57.5" y="41.5"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="yQx-sm-s7a" secondAttribute="trailing" constant="8" id="1qz-eT-bz1"/>
+                <constraint firstItem="ruy-8O-ZUk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="44K-cc-AcN"/>
+                <constraint firstAttribute="bottom" secondItem="c4g-vh-tIp" secondAttribute="bottom" constant="8" id="5d2-6h-Zxv"/>
+                <constraint firstItem="M1t-gb-StA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5mR-JE-k43"/>
+                <constraint firstItem="Rzt-GP-hOX" firstAttribute="leading" secondItem="ruy-8O-ZUk" secondAttribute="trailing" constant="50" id="8V3-za-Ej0"/>
+                <constraint firstItem="J9d-Hg-15x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AYM-GN-M9a"/>
+                <constraint firstItem="yQx-sm-s7a" firstAttribute="top" secondItem="bbG-Yb-CzI" secondAttribute="bottom" constant="10" id="CeW-B4-JIy"/>
+                <constraint firstItem="gzt-FC-dSy" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F91-bw-sjW"/>
+                <constraint firstItem="JyQ-0w-LxG" firstAttribute="trailing" secondItem="y6d-L3-IHq" secondAttribute="trailing" id="K6v-Np-X5I"/>
+                <constraint firstItem="Rzt-GP-hOX" firstAttribute="top" secondItem="M1t-gb-StA" secondAttribute="bottom" constant="10" id="KC1-7F-bo9"/>
+                <constraint firstItem="y6d-L3-IHq" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LVj-PG-avF"/>
+                <constraint firstItem="J9d-Hg-15x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Ob7-KB-AYc"/>
+                <constraint firstItem="i1b-xW-lVR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Qbe-jO-QkZ"/>
+                <constraint firstItem="8aM-b6-pKK" firstAttribute="leading" secondItem="y6d-L3-IHq" secondAttribute="leading" id="SiO-D1-5Vh"/>
+                <constraint firstAttribute="bottom" secondItem="C24-G0-HEO" secondAttribute="bottom" constant="8" id="Sr1-W0-b1e"/>
+                <constraint firstItem="gzt-FC-dSy" firstAttribute="top" secondItem="y6d-L3-IHq" secondAttribute="top" id="TD7-Sj-U1L"/>
+                <constraint firstItem="J9d-Hg-15x" firstAttribute="bottom" secondItem="y6d-L3-IHq" secondAttribute="bottom" id="TzT-zt-OGH"/>
+                <constraint firstItem="c4g-vh-tIp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y6d-L3-IHq" secondAttribute="bottom" id="UCF-nh-wrE"/>
+                <constraint firstItem="8aM-b6-pKK" firstAttribute="centerY" secondItem="y6d-L3-IHq" secondAttribute="centerY" id="UsD-Yl-Eud"/>
+                <constraint firstItem="ruy-8O-ZUk" firstAttribute="top" secondItem="u2g-lR-lr4" secondAttribute="bottom" constant="10" id="XBR-t1-4ce"/>
+                <constraint firstItem="yQx-sm-s7a" firstAttribute="leading" secondItem="4D7-e9-FEt" secondAttribute="trailing" constant="50" id="Z4j-su-o5J"/>
+                <constraint firstItem="i1b-xW-lVR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bdY-95-ZJu"/>
+                <constraint firstItem="JyQ-0w-LxG" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="dDP-j6-t1I"/>
+                <constraint firstItem="y6d-L3-IHq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="eJb-5n-9al"/>
+                <constraint firstAttribute="trailing" secondItem="bbG-Yb-CzI" secondAttribute="trailing" constant="8" id="ejU-qa-Tm5"/>
+                <constraint firstItem="M1t-gb-StA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="f93-5H-lIx"/>
+                <constraint firstItem="u2g-lR-lr4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="irV-g7-NGS"/>
+                <constraint firstItem="c4g-vh-tIp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jC2-TM-N05"/>
+                <constraint firstItem="u2g-lR-lr4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jJg-gh-cJ0"/>
+                <constraint firstItem="4D7-e9-FEt" firstAttribute="top" secondItem="M1t-gb-StA" secondAttribute="bottom" constant="10" id="kcO-8f-q0g"/>
+                <constraint firstAttribute="trailing" secondItem="JuB-D4-zKy" secondAttribute="trailing" constant="8" id="mUz-VW-2kL"/>
+                <constraint firstAttribute="bottom" secondItem="JuB-D4-zKy" secondAttribute="bottom" constant="8" id="s8A-pJ-KQ4"/>
+                <constraint firstItem="bbG-Yb-CzI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="t5m-qc-7ln"/>
+                <constraint firstItem="C24-G0-HEO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="v1X-eJ-4FA"/>
+                <constraint firstItem="y6d-L3-IHq" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Rzt-GP-hOX" secondAttribute="bottom" id="zRZ-6P-WaJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <point key="canvasLocation" x="-66" y="-35"/>
         </view>
     </objects>
+    <resources>
+        <image name="BackButtonDefault" width="172" height="172"/>
+        <image name="BackButtonHighlighted" width="172" height="172"/>
+        <image name="CenterBackground" width="741" height="741"/>
+        <image name="DisconnectedButtonDefault" width="172" height="172"/>
+        <image name="DisconnectedButtonHighlighted" width="172" height="172"/>
+        <image name="DownButtonDefault" width="246" height="246"/>
+        <image name="DownButtonHighlighted" width="246" height="246"/>
+        <image name="HomeButtonDefault" width="172" height="172"/>
+        <image name="HomeButtonHighlighted" width="172" height="172"/>
+        <image name="KeyboardButtonDefault" width="172" height="172"/>
+        <image name="KeyboardButtonHighlighted" width="172" height="172"/>
+        <image name="LeftButtonDefault" width="246" height="246"/>
+        <image name="LeftButtonHighlighted" width="246" height="246"/>
+        <image name="MenuButtonDefault" width="172" height="172"/>
+        <image name="MenuButtonHighlighted" width="172" height="172"/>
+        <image name="MuteButtonDefault" width="172" height="172"/>
+        <image name="MuteButtonHighlighted" width="172" height="172"/>
+        <image name="OKButtonDefault" width="226" height="226"/>
+        <image name="OKButtonHighlighted" width="226" height="226"/>
+        <image name="PowerButtonDefault" width="172" height="172"/>
+        <image name="PowerButtonHighlighted" width="172" height="172"/>
+        <image name="RightButtonDefault" width="246" height="246"/>
+        <image name="RightButtonHighlighted" width="246" height="246"/>
+        <image name="TipButtonDefault" width="172" height="172"/>
+        <image name="TipButtonHighlighted" width="172" height="172"/>
+        <image name="UpButtonDefault" width="246" height="246"/>
+        <image name="UpButtonHighlighted" width="246" height="246"/>
+        <image name="VolumeDownButtonDefault" width="172" height="172"/>
+        <image name="VolumeDownButtonHighlighted" width="172" height="172"/>
+        <image name="VolumeUpButtonDefault" width="172" height="172"/>
+        <image name="VolumeUpButtonHighlighted" width="172" height="172"/>
+    </resources>
 </document>
